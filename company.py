@@ -39,13 +39,6 @@ st.set_page_config(page_title="Company Details App")
 
 st.header("Company Details recongnizer")
 input=st.text_input("Input Prompt: ",key="input")
-uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
-image=""   
-if uploaded_file is not None:
-    image = Image.open(uploaded_file)
-    st.image(image, caption="Uploaded Image.", use_column_width=True)
-
-
 submit=st.button("Tell me the details")
 
 input_prompt="""
